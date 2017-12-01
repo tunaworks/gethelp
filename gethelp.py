@@ -4,10 +4,10 @@ import sys, os, inspect, importlib
 import pkgutil as pk
 
 
-def helpdoc(module):
+def Helpdoc(module, path=sys.path[0]):
     modname = module.__name__
     ipath = "".join(module.__path__)
-    opath = os.path.join(sys.path[0], "readme/{}".format(modname))
+    opath = os.path.join(path, "readme/{}".format(modname))
 
     classes = {}
     files = {}
@@ -50,8 +50,9 @@ def helpdoc(module):
                             except FileExistsError:
                                 break
 
+    print("saved to \"{}\"".format(opath))
     return(0)
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+    #Helpdoc(sys.argv[0], path=sys.path[0])
 
