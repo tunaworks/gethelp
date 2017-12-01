@@ -33,7 +33,6 @@ somemodule_api.txt
 
 
 ## Usage
-**As module**:
 ```
 from gethelp import Helpdoc as h
 import somemodule
@@ -41,10 +40,4 @@ import somemodule
 h(somemodule)
 ```
 
-**As standalone**
-```
-$cd ~/path
-$from gethelp import Helpdoc as h 
-$import somemodule
-$h.(somemodule)
-```
+
